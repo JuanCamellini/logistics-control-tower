@@ -1,0 +1,12 @@
+relationship rel_order_customer
+	fromColumn: fact_pickup_order.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship rel_order_carrier
+	fromColumn: fact_pickup_order.carrier_id
+	toColumn: dim_carrier.carrier_id
+
+relationship rel_order_document_date
+	fromColumn: fact_pickup_order.document_date
+	toColumn: dim_date.date_key
+

@@ -1,0 +1,49 @@
+table dim_customer
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: customer_id
+
+	column customer_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: customer_name
+
+	column street
+		dataType: string
+		summarizeBy: none
+		sourceColumn: street
+
+	column locality
+		dataType: string
+		summarizeBy: none
+		sourceColumn: locality
+
+	column province
+		dataType: string
+		summarizeBy: none
+		sourceColumn: province
+
+	column route_code
+		dataType: string
+		summarizeBy: none
+		sourceColumn: route_code
+
+	column route
+		dataType: string
+		summarizeBy: none
+		sourceColumn: route
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(CarpetaDatos & "dim_customer.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    SinVacios = Table.TransformColumns(Encabezados, {}, each if _ = "" then null else _),
+				    Tipos = Table.TransformColumnTypes(SinVacios, {{"customer_id", Int64.Type}, {"customer_name", type text}, {"street", type text}, {"locality", type text}, {"province", type text}, {"route_code", type text}, {"route", type text}}, "en-US")
+				in
+				    Tipos
+

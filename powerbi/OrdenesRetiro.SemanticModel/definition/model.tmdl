@@ -1,0 +1,20 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["dim_carrier","dim_customer","dim_date","fact_pickup_order","meta_snapshot","CarpetaDatos"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_carrier
+ref table dim_customer
+ref table dim_date
+ref table fact_pickup_order
+ref table meta_snapshot
+
+ref cultureInfo es-AR
+

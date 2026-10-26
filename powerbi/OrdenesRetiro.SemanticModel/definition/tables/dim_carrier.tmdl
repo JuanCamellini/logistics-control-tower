@@ -1,0 +1,35 @@
+table dim_carrier
+
+	column carrier_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: carrier_id
+
+	column carrier_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: carrier_name
+
+	column pickup_sla_days
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: pickup_sla_days
+
+	column depot_sla_days
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: depot_sla_days
+
+	partition dim_carrier = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(CarpetaDatos & "dim_carrier.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    SinVacios = Table.TransformColumns(Encabezados, {}, each if _ = "" then null else _),
+				    Tipos = Table.TransformColumnTypes(SinVacios, {{"carrier_id", type text}, {"carrier_name", type text}, {"pickup_sla_days", Int64.Type}, {"depot_sla_days", Int64.Type}}, "en-US")
+				in
+				    Tipos
+

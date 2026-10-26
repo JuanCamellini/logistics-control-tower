@@ -1,0 +1,250 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "principal",
+  "displayName": "Órdenes de Retiro",
+  "displayOption": "FitToWidth",
+  "height": 1102,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#12151B'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#0D1015'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "subtitulo",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "titulo",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "card_actualizado",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "buscador",
+      "target": "chart_proveedor",
+      "type": "NoFilter"
+    },
+    {
+      "source": "buscador",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "buscador",
+      "target": "chart_provincia",
+      "type": "NoFilter"
+    },
+    {
+      "source": "slicer_proveedor",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "slicer_estado",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "slicer_rango",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "slicer_ruta",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "slicer_fecha",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_total",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_gestion",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_retiradas",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_criticas",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_pct_criticas",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_pct_depuradas",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "kpi_ciclo",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "titulo_tabla",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "boton_detalle_cliente",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_total",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_gestion",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_retiradas",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_criticas",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_pct_criticas",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_pct_depuradas",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "kpi_ciclo",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_estado",
+      "type": "HighlightFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_proveedor",
+      "type": "HighlightFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_antiguedad",
+      "type": "HighlightFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_motivos",
+      "type": "HighlightFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "tabla_detalle",
+      "target": "chart_provincia",
+      "type": "HighlightFilter"
+    },
+    {
+      "source": "chart_estado",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "chart_proveedor",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "chart_antiguedad",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "chart_motivos",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    },
+    {
+      "source": "chart_provincia",
+      "target": "chart_atraso",
+      "type": "NoFilter"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "OrdenesRetiro"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a3e5175c-dbab-4b74-8e3e-286e20539c45"
+  }
+}

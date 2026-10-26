@@ -1,0 +1,1051 @@
+cultureInfo es-AR
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fact_pickup_order.order_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "order_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Orden": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.document_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "document_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Fecha doc": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Creación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.packages": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "packages"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.delay_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "delay_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Días atraso": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.pickup_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "pickup_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Retiro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.arrival_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "arrival_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rendida": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Llegada depósito": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.notes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "notes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Observación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.sent_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "sent_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Envío": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.pickup_business_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "pickup_business_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Días háb. retiro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.pickup_sla_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "pickup_sla_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SLA retiro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.depot_business_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "depot_business_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Días háb. rendición": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.depot_sla_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "depot_sla_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SLA rendición": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_customer.customer_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "customer_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_customer.locality": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "locality"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Localidad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_customer.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "customer_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "N° cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_customer.street": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "street"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "dim_customer.province": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "province"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "dim_customer.route": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_customer",
+			          "ConceptualProperty": "route"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ruta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_carrier.carrier_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_carrier",
+			          "ConceptualProperty": "carrier_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Proveedor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.bultos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.órdenes_en_gestión": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes En Gestión"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.bultos_en_gestión": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos En Gestión"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.órdenes_retiradas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Retiradas"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.bultos_retirados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Retirados"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.órdenes_críticas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Críticas"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.bultos_críticos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Críticos"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.críticas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "% Críticas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "de pendientes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.depuradas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "% Depuradas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "del total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.tiempo_total_del_ciclo_días": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Tiempo Total del Ciclo (días)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "días de ciclo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.delay_bucket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "delay_bucket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rango de atraso": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_pendientes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Pendientes"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.bultos_pendientes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Pendientes"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fact_pickup_order.tiempo_de_ciclo_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Tiempo de Ciclo General"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Promedio general": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.depuradas_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "% Depuradas General"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Promedio general": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_date.date_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_date",
+			          "ConceptualProperty": "date_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Fecha del documento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.search_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "search_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "N° orden o cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_críticas_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Críticas KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "órdenes críticas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.bultos_críticos_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Críticos KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_en_gestión_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes En Gestión KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.bultos_en_gestión_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos En Gestión KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_retiradas_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Retiradas KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.bultos_retirados_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Retirados KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.bultos_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.órdenes_pendientes_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Órdenes Pendientes KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.bultos_pendientes_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Bultos Pendientes KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bultos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.cliente_dirección": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Cliente Dirección"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dirección": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.cliente_localidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Cliente Localidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Localidad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.cliente_provincia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Cliente Provincia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Provincia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.cliente_ruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Cliente Ruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ruta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.cliente_proveedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "Cliente Proveedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Proveedor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_pickup_order.incident_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_pickup_order",
+			          "ConceptualProperty": "incident_category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Motivo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,6 @@
+/// Folder with the CSVs exported by `python -m lct`. Change it to your own path (must end with \).
+expression CarpetaDatos = "C:\logistics-control-tower\output\powerbi\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 6ec26911-7682-4508-8b59-a3652cb772b5
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "OrdenesRetiro"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dbeca567-740d-4eba-94ca-02a020e693bd"
+  }
+}

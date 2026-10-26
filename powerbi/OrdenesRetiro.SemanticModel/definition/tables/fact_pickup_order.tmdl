@@ -1,0 +1,260 @@
+table fact_pickup_order
+
+	measure 'Órdenes' = COUNTROWS ( fact_pickup_order )
+		formatString: #,0
+
+	measure Bultos = SUM ( fact_pickup_order[packages] )
+		formatString: #,0
+
+	measure 'Órdenes Pendientes' = CALCULATE ( [Órdenes], KEEPFILTERS ( fact_pickup_order[status] IN { "EN GESTION", "RETIRADO" } ) )
+		formatString: #,0
+
+	measure 'Bultos Pendientes' = CALCULATE ( [Bultos], KEEPFILTERS ( fact_pickup_order[status] IN { "EN GESTION", "RETIRADO" } ) )
+		formatString: #,0
+
+	measure 'Órdenes En Gestión' = CALCULATE ( [Órdenes], KEEPFILTERS ( fact_pickup_order[status] = "EN GESTION" ) )
+		formatString: #,0
+
+	measure 'Bultos En Gestión' = CALCULATE ( [Bultos], KEEPFILTERS ( fact_pickup_order[status] = "EN GESTION" ) )
+		formatString: #,0
+
+	measure 'Órdenes Retiradas' = CALCULATE ( [Órdenes], KEEPFILTERS ( fact_pickup_order[status] = "RETIRADO" ) )
+		formatString: #,0
+
+	measure 'Bultos Retirados' = CALCULATE ( [Bultos], KEEPFILTERS ( fact_pickup_order[status] = "RETIRADO" ) )
+		formatString: #,0
+
+	measure 'Órdenes Críticas' = CALCULATE ( [Órdenes], KEEPFILTERS ( fact_pickup_order[is_critical] = TRUE () ) )
+		formatString: #,0
+
+	measure 'Bultos Críticos' = CALCULATE ( [Bultos], KEEPFILTERS ( fact_pickup_order[is_critical] = TRUE () ) )
+		formatString: #,0
+
+	measure '% Críticas' = DIVIDE ( COALESCE ( [Órdenes Críticas], 0 ), [Órdenes Pendientes], 0 )
+		formatString: 0.0%;-0.0%;0.0%
+
+	measure 'Órdenes Depuradas' = CALCULATE ( [Órdenes], KEEPFILTERS ( fact_pickup_order[status] = "DEPURADA" ) )
+		formatString: #,0
+
+	measure '% Depuradas' = DIVIDE ( COALESCE ( [Órdenes Depuradas], 0 ), [Órdenes], 0 )
+		formatString: 0.0%;-0.0%;0.0%
+
+	measure 'Tiempo Total del Ciclo (días)' = CALCULATE ( AVERAGE ( fact_pickup_order[delay_days] ), KEEPFILTERS ( fact_pickup_order[status] = "EN PUNTO DE CONTROL" ) )
+		formatString: 0.0
+
+	measure 'Promedio Días de Atraso Pendientes' = CALCULATE ( AVERAGE ( fact_pickup_order[delay_days] ), KEEPFILTERS ( fact_pickup_order[status] IN { "EN GESTION", "RETIRADO" } ) )
+		formatString: 0.0
+
+	measure Actualizado = "Actualizado " & FORMAT ( MAX ( meta_snapshot[as_of_date] ), "dd/mm/yyyy" )
+
+	measure 'Cliente Seleccionado' = IF ( HASONEVALUE ( dim_customer[customer_id] ), SELECTEDVALUE ( dim_customer[customer_name] ) & "  ·  N° " & SELECTEDVALUE ( dim_customer[customer_id] ), "Seleccioná un cliente" )
+
+	measure 'Color SLA Retiro' = SWITCH ( SELECTEDVALUE ( fact_pickup_order[pickup_sla_status] ), "Fuera de plazo", "#F87171", "En plazo", "#4ADE80", "En curso", "#FBBF24", "#9AA4B2" )
+
+	measure 'Color SLA Rendición' = SWITCH ( SELECTEDVALUE ( fact_pickup_order[depot_sla_status] ), "Fuera de plazo", "#F87171", "En plazo", "#4ADE80", "En curso", "#FBBF24", "#9AA4B2" )
+
+	measure 'Cliente Dirección' = SELECTEDVALUE ( dim_customer[street], "-" )
+
+	measure 'Cliente Localidad' = SELECTEDVALUE ( dim_customer[locality], "-" )
+
+	measure 'Cliente Provincia' = SELECTEDVALUE ( dim_customer[province], "-" )
+
+	measure 'Cliente Ruta' = SELECTEDVALUE ( dim_customer[route], "-" )
+
+	measure 'Cliente Proveedor' = CALCULATE ( SELECTEDVALUE ( dim_carrier[carrier_name], "-" ), CROSSFILTER ( fact_pickup_order[carrier_id], dim_carrier[carrier_id], BOTH ) )
+
+	measure 'Órdenes por Mes' = IF ( MIN ( dim_date[date_key] ) <= MAX ( meta_snapshot[as_of_date] ), COALESCE ( [Órdenes], 0 ) )
+		formatString: #,0
+
+	measure 'Título Depuradas' = "Órdenes depuradas del cliente (" & COALESCE ( [Órdenes Depuradas], 0 ) & ")"
+
+	measure 'Título Línea de Tiempo' = "Línea de tiempo de sus órdenes (" & COALESCE ( [Órdenes], 0 ) & ")"
+
+	measure 'Tiempo de Ciclo General' = CALCULATE ( [Tiempo Total del Ciclo (días)], REMOVEFILTERS ( dim_customer ) )
+		formatString: 0.0
+
+	measure '% Depuradas General' = CALCULATE ( [% Depuradas], REMOVEFILTERS ( dim_customer ) )
+		formatString: 0.0%;-0.0%;0.0%
+
+	measure 'Órdenes KPI' = COALESCE ( [Órdenes], 0 )
+		formatString: #,0
+
+	measure 'Bultos KPI' = COALESCE ( [Bultos], 0 )
+		formatString: #,0
+
+	measure 'Órdenes Pendientes KPI' = COALESCE ( [Órdenes Pendientes], 0 )
+		formatString: #,0
+
+	measure 'Bultos Pendientes KPI' = COALESCE ( [Bultos Pendientes], 0 )
+		formatString: #,0
+
+	measure 'Órdenes En Gestión KPI' = COALESCE ( [Órdenes En Gestión], 0 )
+		formatString: #,0
+
+	measure 'Bultos En Gestión KPI' = COALESCE ( [Bultos En Gestión], 0 )
+		formatString: #,0
+
+	measure 'Órdenes Retiradas KPI' = COALESCE ( [Órdenes Retiradas], 0 )
+		formatString: #,0
+
+	measure 'Bultos Retirados KPI' = COALESCE ( [Bultos Retirados], 0 )
+		formatString: #,0
+
+	measure 'Órdenes Críticas KPI' = COALESCE ( [Órdenes Críticas], 0 )
+		formatString: #,0
+
+	measure 'Bultos Críticos KPI' = COALESCE ( [Bultos Críticos], 0 )
+		formatString: #,0
+
+	column order_id
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: order_id
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: customer_id
+
+	column carrier_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: carrier_id
+
+	column document_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: document_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sent_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: sent_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column expected_pickup_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: expected_pickup_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pickup_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: pickup_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column expected_arrival_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: expected_arrival_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column arrival_date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: arrival_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column packages
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: packages
+
+	column status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: status
+
+	column is_critical
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: is_critical
+
+	column alert_sent
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: alert_sent
+
+	column delay_days
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: delay_days
+
+	column delay_bucket
+		dataType: string
+		summarizeBy: none
+		sourceColumn: delay_bucket
+		sortByColumn: delay_bucket_order
+
+	column business_days_in_status
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: business_days_in_status
+
+	column notes
+		dataType: string
+		summarizeBy: none
+		sourceColumn: notes
+
+	column incident_category
+		dataType: string
+		summarizeBy: none
+		sourceColumn: incident_category
+
+	column pickup_business_days
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: pickup_business_days
+
+	column pickup_sla_status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: pickup_sla_status
+
+	column depot_business_days
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: depot_business_days
+
+	column depot_sla_status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: depot_sla_status
+
+	column delay_bucket_order
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: delay_bucket_order
+
+	column search_key = FORMAT ( fact_pickup_order[order_id], "0" ) & "  ·  " & RELATED ( dim_customer[customer_name] ) & "  ·  " & FORMAT ( fact_pickup_order[customer_id], "0" )
+		dataType: string
+		summarizeBy: none
+
+	partition fact_pickup_order = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(CarpetaDatos & "fact_pickup_order.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    SinVacios = Table.TransformColumns(Encabezados, {}, each if _ = "" then null else _),
+				    Tipos = Table.TransformColumnTypes(SinVacios, {{"order_id", Int64.Type}, {"customer_id", Int64.Type}, {"carrier_id", type text}, {"document_date", type date}, {"sent_date", type date}, {"expected_pickup_date", type date}, {"pickup_date", type date}, {"expected_arrival_date", type date}, {"arrival_date", type date}, {"packages", Int64.Type}, {"status", type text}, {"is_critical", type logical}, {"alert_sent", type logical}, {"delay_days", Int64.Type}, {"delay_bucket", type text}, {"business_days_in_status", Int64.Type}, {"notes", type text}, {"incident_category", type text}, {"pickup_business_days", Int64.Type}, {"pickup_sla_status", type text}, {"depot_business_days", Int64.Type}, {"depot_sla_status", type text}}, "en-US"),
+				    Extra0 = Table.AddColumn(Tipos, "delay_bucket_order", each if [delay_bucket] = "0 - 7 días" then 1 else if [delay_bucket] = "8 - 15 días" then 2 else if [delay_bucket] = "16 - 30 días" then 3 else if [delay_bucket] = "31 - 60 días" then 4 else if [delay_bucket] = null then null else 5, Int64.Type)
+				in
+				    Extra0
+
