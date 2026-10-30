@@ -119,7 +119,6 @@ tests/           pytest suite
 ## Roadmap
 
 - [ ] Send the alert emails through SMTP
-- [ ] Delivery traceability (delivery notes and proof of delivery) as a second module
 - [ ] Freight invoice audit: billed amounts vs. the carrier's rate card
 
 ## Resumen en español
